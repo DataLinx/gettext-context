@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Gettext context test\n"
+"POT-Creation-Date: 2020-09-26 14:45+0200\n"
+"PO-Revision-Date: 2020-09-26 14:52+0200\n"
+"Last-Translator: Omer Sabic <omer@datalinx.si>\n"
+"Language-Team: DataLinx\n"
+"Language: sl_SI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ../../../tests\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
+"X-Poedit-KeywordsList: _;pgettext:1c,2;npgettext:1c,2,3;dpgettext:2c,3;"
+"dnpgettext:2c,3,4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Test.php:19 Test.php:47 Test.php:50 Test.php:63
+msgctxt "User"
+msgid "Name"
+msgstr "Ime"
+
+#: Test.php:20
+msgctxt "Product"
+msgid "Name"
+msgstr "Naziv"
+
+#: Test.php:23 Test.php:53
+msgctxt "Country"
+msgid "Name"
+msgstr ""
+
+#: Test.php:29 Test.php:30 Test.php:31 Test.php:32 Test.php:33 Test.php:66
+#: Test.php:67 Test.php:68 Test.php:69 Test.php:70
+#, php-format
+msgctxt "User"
+msgid "%d name"
+msgid_plural "%d names"
+msgstr[0] "%d ime"
+msgstr[1] "%d imeni"
+msgstr[2] "%d imena"
+msgstr[3] "%d imen"
+
+#: Test.php:35 Test.php:72
+#, php-format
+msgctxt "Product"
+msgid "%d name"
+msgid_plural "%d names"
+msgstr[0] "%d naziv"
+msgstr[1] "%d naziva"
+msgstr[2] "%d nazivi"
+msgstr[3] "%d nazivov"
+
+#: Test.php:38 Test.php:75
+#, php-format
+msgctxt "Country"
+msgid "%d name"
+msgid_plural "%d names"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""

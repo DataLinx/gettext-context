@@ -1,0 +1,25 @@
+{
+    "name": "datalinx/gettext-context",
+    "description": "Implementation of context functions for the PHP gettext extension",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Omer Sabic",
+            "email": "omer@datalinx.si"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "ext-gettext": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "jaschilz/php-coverage-badger": "^2.0"
+    },
+    "autoload-dev": {
+        "files": [
+            "src/gettext-context.php"
+        ]
+    }
+}
