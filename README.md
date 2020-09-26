@@ -1,7 +1,11 @@
 # gettext-context
 Implementation of context functions for the PHP gettext extension
 
+![Packagist Version](https://img.shields.io/packagist/v/datalinx/gettext-context)
+![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/datalinx/gettext-context)
 ![Coverage 100%](assets/coverage.svg)
+![Packagist License](https://img.shields.io/packagist/l/datalinx/gettext-context)
+![Packagist Downloads](https://img.shields.io/packagist/dt/datalinx/gettext-context)
 
 ## About
 PHP still lacks full support for gettext, because it does not implement the context functions.
@@ -20,10 +24,12 @@ It can be used on lower versions of PHP, but you won't be able to install it wit
 \* It's not added to the `autoload` directive, since you might not need or want to always include it in runtime. If you want to always load it, just add the source file to your `composer.json` autoload files list:
 
 ```json
-"autoload": {
-    "files": [
-        "vendor/datalinx/gettext-context/src/gettext-context.php"
-    ]
+{
+    "autoload": {
+        "files": [
+            "vendor/datalinx/gettext-context/src/gettext-context.php"
+        ]
+    }
 }
 ```
 
