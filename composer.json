@@ -9,8 +9,9 @@
             "email": "omer@datalinx.si"
         }
     ],
+    "keywords": ["gettext","context","pgettext"],
     "require": {
-        "php": ">=5.3",
+        "php": ">=7.2",
         "ext-gettext": "*"
     },
     "require-dev": {
