@@ -1,0 +1,27 @@
+name: gettext-context
+services:
+  appserver:
+    type: php:7.2
+    via: cli
+    webroot: .
+    xdebug: "debug,coverage,develop"
+    config:
+      php: config/php.ini
+    build_as_root:
+      - apt-get update -y
+      # Install all system locales
+      - apt-get install locales locales-all -y
+    overrides:
+      environment:
+        # Support debugging CLI with XDEBUG.
+        PHP_IDE_CONFIG: "serverName=appserver"
+        XDEBUG_SESSION_START: lando
+tooling:
+  php:
+    service: appserver
+  composer:
+    service: appserver
+  phpunit:
+    service: appserver
+    description: Run PHPUnit tests
+    cmd: "/app/vendor/bin/phpunit"
