@@ -1,7 +1,6 @@
 <?php
 
-if ( ! function_exists('pgettext'))
-{
+if (! function_exists('pgettext')) {
     /**
      * Lookup a message in the current domain for the specified context.
      *
@@ -25,8 +24,7 @@ if ( ! function_exists('pgettext'))
     }
 }
 
-if ( ! function_exists('npgettext'))
-{
+if (! function_exists('npgettext')) {
     /**
      * The plural version of pgettext(). Some languages have more than one form for plural messages dependent on the count.
      *
@@ -44,7 +42,7 @@ if ( ! function_exists('npgettext'))
         $translation = ngettext($context_singular, $context_plural, $number);
 
         // If the translation was not found...
-        if ($translation === $context_singular OR $translation === $context_plural) {
+        if ($translation === $context_singular or $translation === $context_plural) {
             // Use native function to return the appropriate string
             return ngettext($singular, $plural, $number);
         }
@@ -53,8 +51,7 @@ if ( ! function_exists('npgettext'))
     }
 }
 
-if ( ! function_exists('dpgettext'))
-{
+if (! function_exists('dpgettext')) {
     /**
      * The dpgettext() function allows you to override the current domain for a single message lookup for the specified context.
      *
@@ -79,8 +76,7 @@ if ( ! function_exists('dpgettext'))
     }
 }
 
-if ( ! function_exists('dnpgettext'))
-{
+if (! function_exists('dnpgettext')) {
     /**
      * The dnpgettext() function allows you to override the current domain for a single plural message lookup for the specified context.
      *
@@ -99,7 +95,7 @@ if ( ! function_exists('dnpgettext'))
         $translation = dngettext($domain, $context_singular, $context_plural, $number);
 
         // If the translation was not found...
-        if ($translation === $context_singular OR $translation === $context_plural) {
+        if ($translation === $context_singular or $translation === $context_plural) {
             // Use native function to return the appropriate string
             return dngettext($domain, $singular, $plural, $number);
         }

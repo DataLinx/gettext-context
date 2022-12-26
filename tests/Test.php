@@ -57,7 +57,7 @@ class Test extends TestCase
     {
         // Switch to a different domain
         textdomain('something');
-        $this->assertEquals('something', textdomain(NULL));
+        $this->assertEquals('something', textdomain(null));
 
         // Make sure we are not using the correct domain
         $this->assertEquals('Name', pgettext('User', 'Name'));
@@ -75,6 +75,6 @@ class Test extends TestCase
         $this->assertEquals('1 name', sprintf(dnpgettext('messages', 'Country', '%d name', '%d names', 1), 1));
 
         // Assert we haven't switched the domain
-        $this->assertEquals('something', textdomain(NULL));
+        $this->assertEquals('something', textdomain(null));
     }
 }
