@@ -8,9 +8,23 @@ class Test extends TestCase
     {
         parent::setUp();
 
-        bindtextdomain('messages', './locales');
-        textdomain('messages');
-        setlocale(LC_ALL,'sl_SI.UTF-8');
+        $path = __DIR__ .'/../locales';
+        $domain = 'messages';
+        $locale = 'sl_SI.utf8';
+
+        if (! bindtextdomain($domain, $path)) {
+            throw new RuntimeException('Could not bind "'. $domain .'" text domain to local directory "'. $path .'"');
+        }
+
+        if (textdomain($domain) !== $domain) {
+            throw new RuntimeException('Could not set text domain to "'. $domain .'"');
+        }
+
+        $test = setlocale(LC_ALL, $locale);
+
+        if (! $test) {
+            throw new RuntimeException('Could not change locale to "'. $locale .'" - is it installed?');
+        }
     }
 
     public function test_pgettext()
