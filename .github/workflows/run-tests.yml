@@ -9,6 +9,9 @@ on:
 permissions:
   contents: read
 
+env:
+  LANG: "sl_SI.utf8"
+
 jobs:
   test:
 
@@ -24,6 +27,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: Set up system locale
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        sudo apt-get install -y locales
+        sudo locale-gen ${{ env.LANG }}
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
