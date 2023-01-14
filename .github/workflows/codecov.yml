@@ -43,7 +43,7 @@ jobs:
         run: vendor/bin/phpunit
 
       - name: Upload to Codecov
-        run: |
-          curl -Os https://uploader.codecov.io/latest/linux/codecov
-          chmod +x codecov
-          ./codecov
+        uses: codecov/codecov-action@v2
+        with:
+          files: ./build/coverage.xml
+          verbose: true
