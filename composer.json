@@ -21,9 +21,9 @@
         "phpunit/phpunit": "^8.5"
     },
     "autoload-dev": {
-        "files": [
-            "src/gettext-context.php"
-        ]
+        "psr-4": {
+            "DataLinx\\GettextContext\\Tests\\": "tests/"
+        }
     },
     "scripts": {
         "test": "vendor/bin/phpunit",

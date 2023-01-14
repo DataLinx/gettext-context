@@ -47,7 +47,7 @@ You can add extra keyword parameters to your `xgettext` call to include the cont
 For example, this would be used in our package:
 
 ```shell
-xgettext --force-po --keyword=pgettext:1c,2 --keyword=npgettext:1c,2,3 --keyword=dpgettext:2c,3 --keyword=dnpgettext:2c,3,4 -c -o messages.po tests/Test.php
+xgettext --force-po --keyword=pgettext:1c,2 --keyword=npgettext:1c,2,3 --keyword=dpgettext:2c,3 --keyword=dnpgettext:2c,3,4 -c -o messages.po tests/Unit/Test.php
 ```
 
 ### With Poedit

@@ -1,6 +1,9 @@
 <?php
 
+namespace DataLinx\GettextContext\Tests\Unit;
+
 use PHPUnit\Framework\TestCase;
+use RuntimeException;
 
 class Test extends TestCase
 {
@@ -8,7 +11,7 @@ class Test extends TestCase
     {
         parent::setUp();
 
-        $path = __DIR__ .'/../locales';
+        $path = __DIR__ .'/../../locales';
         $domain = 'messages';
         $locale = 'sl_SI.utf8';
 
