@@ -27,8 +27,11 @@ jobs:
           sudo apt-get install -y locales
           sudo locale-gen ${{ env.LANG }}
 
-      - name: Install composer and dependencies
-        uses: php-actions/composer@v6
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.2
+          extensions: xdebug, gettext
 
       - name: Run PHPUnit tests
         uses: php-actions/phpunit@v3
@@ -36,7 +39,7 @@ jobs:
           XDEBUG_MODE: coverage
         with:
           configuration: phpunit.xml.dist
-          php_extensions: xdebug,gettext
+          php_extensions: xdebug, gettext
 
       - name: Upload to Codecov
         run: |
