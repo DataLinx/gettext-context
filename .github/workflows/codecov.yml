@@ -1,0 +1,45 @@
+name: Update codecov
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+env:
+  LANG: "sl_SI.utf8"
+
+jobs:
+  codecov:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Set up system locale
+        run: |
+          sudo apt-get install -y locales
+          sudo locale-gen ${{ env.LANG }}
+
+      - name: Install composer and dependencies
+        uses: php-actions/composer@v6
+
+      - name: Run PHPUnit tests
+        uses: php-actions/phpunit@v3
+        env:
+          XDEBUG_MODE: coverage
+        with:
+          configuration: phpunit.xml.dist
+          php_extensions: xdebug,gettext
+
+      - name: Upload to Codecov
+        run: |
+          curl -Os https://uploader.codecov.io/latest/linux/codecov
+          chmod +x codecov
+          ./codecov
