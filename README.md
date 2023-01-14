@@ -3,7 +3,7 @@ Implementation of context functions for the PHP gettext extension
 
 ![Packagist Version](https://img.shields.io/packagist/v/datalinx/gettext-context)
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/datalinx/gettext-context)
-![Coverage 100%](assets/coverage.svg)
+[![codecov](https://codecov.io/gh/DataLinx/gettext-context/branch/master/graph/badge.svg?token=A27REX206L)](https://codecov.io/gh/DataLinx/gettext-context)
 ![Packagist License](https://img.shields.io/packagist/l/datalinx/gettext-context)
 ![Packagist Downloads](https://img.shields.io/packagist/dt/datalinx/gettext-context)
 [![Tests](https://github.com/DataLinx/gettext-context/actions/workflows/run-tests.yml/badge.svg)](https://github.com/DataLinx/gettext-context/actions/workflows/run-tests.yml)
