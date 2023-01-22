@@ -1,7 +1,7 @@
 name: gettext-context
 services:
   appserver:
-    type: php:7.2
+    type: php:8.1
     via: cli
     webroot: .
     xdebug: "debug,coverage,develop"
