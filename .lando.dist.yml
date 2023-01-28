@@ -13,7 +13,7 @@ services:
         PHP_IDE_CONFIG: "serverName=appserver"
         XDEBUG_SESSION_START: lando
       build: ./config
-      image: datalinx/php:8.1-custom
+      image: datalinx/php:8.1-gettext-context
 tooling:
   php:
     service: appserver
