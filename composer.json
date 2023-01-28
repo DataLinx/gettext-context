@@ -9,7 +9,11 @@
             "email": "info@datalinx.si"
         }
     ],
-    "keywords": ["gettext", "context", "pgettext"],
+    "keywords": [
+        "gettext",
+        "context",
+        "pgettext"
+    ],
     "homepage": "https://github.com/DataLinx/gettext-context",
     "minimum-stability": "stable",
     "require": {
