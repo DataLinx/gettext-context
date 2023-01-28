@@ -30,7 +30,7 @@ class Test extends TestCase
         }
     }
 
-    public function test_pgettext()
+    public function test_pgettext(): void
     {
         // Test translated
         $this->assertEquals('Ime', pgettext('User', 'Name'));
@@ -40,14 +40,14 @@ class Test extends TestCase
         $this->assertEquals('Name', pgettext('Country', 'Name'));
     }
 
-    public function test_npgettext()
+    public function test_npgettext(): void
     {
         // Test translated
         $this->assertEquals('1 ime', sprintf(npgettext('User', '%d name', '%d names', 1), 1));
         $this->assertEquals('2 imeni', sprintf(npgettext('User', '%d name', '%d names', 2), 2));
         $this->assertEquals('3 imena', sprintf(npgettext('User', '%d name', '%d names', 3), 3));
         $this->assertEquals('5 imen', sprintf(npgettext('User', '%d name', '%d names', 5), 5));
-        $this->assertEquals('101 ime', sprintf(npgettext('User', '%d name', '%d names', 101), 101));
+        $this->assertEquals('101 ime', sprintf(npgettext('User', '%d name', '%d names', '101'), 101));
 
         $this->assertEquals('1 naziv', sprintf(npgettext('Product', '%d name', '%d names', 1), 1));
 
@@ -55,7 +55,7 @@ class Test extends TestCase
         $this->assertEquals('1 name', sprintf(npgettext('Country', '%d name', '%d names', 1), 1));
     }
 
-    public function test_dpgettext()
+    public function test_dpgettext(): void
     {
         // Switch to a different domain
         textdomain('something');
@@ -70,7 +70,7 @@ class Test extends TestCase
         $this->assertEquals('Name', dpgettext('messages', 'Country', 'Name'));
     }
 
-    public function test_dnpgettext()
+    public function test_dnpgettext(): void
     {
         // Switch to a different domain
         textdomain('something');

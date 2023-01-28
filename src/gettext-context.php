@@ -8,9 +8,9 @@ if (! function_exists('pgettext')) {
      * @param string $message The message being translated
      * @return string Translated string if one is found in the translation table, or the submitted message if not found
      */
-    function pgettext($context, $message)
+    function pgettext(string $context, string $message): string
     {
-        $context_message = "{$context}\004{$message}";
+        $context_message = "$context\004$message";
 
         $translation = gettext($context_message);
 
@@ -34,15 +34,15 @@ if (! function_exists('npgettext')) {
      * @param int $number The number (e.g. item count) to determine the translation for the respective grammatical number
      * @return string Correct plural form of message identified by $singular and $plural for $number
      */
-    function npgettext($context, $singular, $plural, $number)
+    function npgettext(string $context, string $singular, string $plural, int $number): string
     {
-        $context_singular = "{$context}\004{$singular}";
-        $context_plural = "{$context}\004{$plural}";
+        $context_singular = "$context\004$singular";
+        $context_plural = "$context\004$plural";
 
         $translation = ngettext($context_singular, $context_plural, $number);
 
         // If the translation was not found...
-        if ($translation === $context_singular or $translation === $context_plural) {
+        if ($translation === $context_singular || $translation === $context_plural) {
             // Use native function to return the appropriate string
             return ngettext($singular, $plural, $number);
         }
@@ -60,9 +60,9 @@ if (! function_exists('dpgettext')) {
      * @param string $message The message being translated
      * @return string Translated string if one is found in the translation table, or the submitted message if not found
      */
-    function dpgettext($domain, $context, $message)
+    function dpgettext(string $domain, string $context, string $message): string
     {
-        $context_message = "{$context}\004{$message}";
+        $context_message = "$context\004$message";
 
         $translation = dgettext($domain, $context_message);
 
@@ -87,15 +87,15 @@ if (! function_exists('dnpgettext')) {
      * @param int $number The number (e.g. item count) to determine the translation for the respective grammatical number
      * @return string Translated string if one is found in the translation table, or the submitted message if not found
      */
-    function dnpgettext($domain, $context, $singular, $plural, $number)
+    function dnpgettext(string $domain, string $context, string $singular, string $plural, int $number): string
     {
-        $context_singular = "{$context}\004{$singular}";
-        $context_plural = "{$context}\004{$plural}";
+        $context_singular = "$context\004$singular";
+        $context_plural = "$context\004$plural";
 
         $translation = dngettext($domain, $context_singular, $context_plural, $number);
 
         // If the translation was not found...
-        if ($translation === $context_singular or $translation === $context_plural) {
+        if ($translation === $context_singular || $translation === $context_plural) {
             // Use native function to return the appropriate string
             return dngettext($domain, $singular, $plural, $number);
         }
