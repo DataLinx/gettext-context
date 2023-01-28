@@ -36,7 +36,7 @@ jobs:
           XDEBUG_MODE: coverage
         with:
           configuration: phpunit.xml.dist
-          php_extensions: xdebug
+          php_extensions: gettext xdebug
           args: --coverage-clover ./coverage.xml
 
       - name: Upload to Codecov
