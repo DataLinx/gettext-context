@@ -12,8 +12,24 @@ Implementation of context functions for the PHP gettext extension
 PHP still lacks full support for gettext, because it does not implement the context functions.
 Until this is sorted out, you can use this package to add context support to your localization efforts.
 
+For example, in English, both persons and products have a "name" attribute.
+So using a simple gettext:
+
+```php
+echo _('Name');
+```
+
+... would yield "Ime" in Slovenian, which is wrong.
+
+To solve this, you can use a context function provided by this package:
+
+```php
+echo pgettext('Person', 'Name'); // Echoes "Ime"
+echo pgettext('Product', 'Name'); // Echoes "Naziv"
+```
+
 ## Requirements
-- PHP >= 7.2
+- PHP >= 7.4
 - gettext PHP extension
 
 It can be used on lower versions of PHP, but you won't be able to install it with composer (or run tests).
