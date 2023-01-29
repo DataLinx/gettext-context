@@ -5,8 +5,6 @@ services:
     via: cli
     webroot: .
     xdebug: "debug,coverage,develop"
-    config:
-      php: config/php.ini
     overrides:
       environment:
         # Support debugging CLI with XDEBUG.
