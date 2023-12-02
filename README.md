@@ -3,10 +3,11 @@ Implementation of context functions for the PHP gettext extension
 
 ![Packagist Version](https://img.shields.io/packagist/v/datalinx/gettext-context)
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/datalinx/gettext-context)
-[![codecov](https://codecov.io/gh/DataLinx/gettext-context/branch/master/graph/badge.svg?token=A27REX206L)](https://codecov.io/gh/DataLinx/gettext-context)
-![Packagist License](https://img.shields.io/packagist/l/datalinx/gettext-context)
 ![Packagist Downloads](https://img.shields.io/packagist/dt/datalinx/gettext-context)
-[![Tests](https://github.com/DataLinx/gettext-context/actions/workflows/run-tests.yml/badge.svg)](https://github.com/DataLinx/gettext-context/actions/workflows/run-tests.yml)
+[![Tests](https://github.com/DataLinx/gettext-context/actions/workflows/test-runner.yml/badge.svg)](https://github.com/DataLinx/gettext-context/actions/workflows/test-runner.yml)
+[![codecov](https://codecov.io/gh/DataLinx/gettext-context/branch/master/graph/badge.svg?token=A27REX206L)](https://codecov.io/gh/DataLinx/gettext-context)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+![Packagist License](https://img.shields.io/packagist/l/datalinx/gettext-context)
 
 ## About
 PHP still lacks full support for gettext, because it does not implement the context functions.
@@ -35,7 +36,7 @@ echo pgettext('Product', 'Name'); // Echoes "Naziv"
 It can be used on lower versions of PHP, but you won't be able to install it with composer (or run tests).
 
 This package is tested for Linux, but it should work for other systems too.
-Any Windows and Mac feedback is highly welcome. It would be great if you could make a pull request for testing on those platforms (including the [GitHub workflow](.github/workflows/run-tests.yml)).
+Any Windows and Mac feedback is highly welcome. It would be great if you could make a pull request for testing on those platforms (including the [GitHub workflow](.github/workflows/test-runner.yml)).
 
 ## Installing
 1. Download it with composer: `composer require datalinx/gettext-context` 
@@ -79,7 +80,7 @@ Then run the "Update from code" procedure :)
 ## Contributing
 If you have some suggestions how to make this package better, please open an issue or even better, submit a pull request.
 
-The project adheres to the PSR-4 and PSR-12 standards.
+Should you want to contribute, please see the development guidelines in the [DataLinx PHP package template](https://github.com/DataLinx/php-package-template).
 
 ### Changelog
 All notable changes to this project are automatically documented in the [CHANGELOG.md](CHANGELOG.md) file using the release workflow, based on the [release-please](https://github.com/googleapis/release-please) GitHub action.
