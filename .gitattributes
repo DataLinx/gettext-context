@@ -4,9 +4,8 @@
 # Ignore all development content with "export-ignore".
 /.github export-ignore
 /.husky export-ignore
-/assets export-ignore
-/config export-ignore
 /docs export-ignore
+/env export-ignore
 /locales export-ignore
 /tests export-ignore
 
@@ -15,7 +14,6 @@
 /.gitignore export-ignore
 /.lando.dist.yml export-ignore
 /.php-cs-fixer.dist.php export-ignore
-/build.sh export-ignore
 /commitlint.config.js export-ignore
 /package.json export-ignore
 /package-lock.json export-ignore
