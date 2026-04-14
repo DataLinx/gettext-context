@@ -74,6 +74,8 @@ jobs:
         # Make sure the Codecov action is only executed once
         if: matrix.os == 'ubuntu-latest' && matrix.php == '7.4'
         uses: codecov/codecov-action@v6.0.0
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
           files: ./coverage.xml
           verbose: true
