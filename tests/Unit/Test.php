@@ -25,7 +25,7 @@ class Test extends TestCase
 
         $test = setlocale(LC_ALL, $locale);
 
-        if (! $test) {
+        if (! $test || setlocale(LC_ALL, 0) != $locale) {
             throw new RuntimeException('Could not change locale to "'. $locale .'" - is it installed?');
         }
     }
