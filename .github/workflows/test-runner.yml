@@ -43,7 +43,7 @@ jobs:
           sudo locale-gen ${{ env.LANG }}
 
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
         with:
           ref: ${{ github.head_ref }}
 
@@ -52,7 +52,7 @@ jobs:
 
       - name: Cache Composer packages
         id: composer-cache
-        uses: actions/cache@v3
+        uses: actions/cache@v5.0.5
         with:
           path: vendor
           key: ${{ runner.os }}-php-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
