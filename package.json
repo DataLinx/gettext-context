@@ -1,17 +1,11 @@
 {
-  "devDependencies": {
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
-    "commitizen": "^4.2.6",
-    "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.2"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+    "private": true,
+    "devDependencies": {
+        "@commitlint/cli": "^20.5.0",
+        "@commitlint/config-conventional": "^20.5.0",
+        "husky": "^9.1.7"
+    },
+    "scripts": {
+        "prepare": "husky install"
     }
-  },
-  "scripts": {
-    "prepare": "husky install"
-  }
 }
