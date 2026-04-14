@@ -1,11 +1,11 @@
 name: gettext-context-php-8.2
 services:
   appserver:
-    type: php:custom
+    type: php:8.2
     via: cli
     app_mount: delegated
     overrides:
-      image: slimdeluxe/php:8.2
+      image: slimdeluxe/php:8.2-v1.4
       volumes:
         # Mount the project root directory to /app
         - "../..:/app"
