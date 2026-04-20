@@ -18,3 +18,5 @@
 /package.json export-ignore
 /package-lock.json export-ignore
 /phpunit.xml.dist export-ignore
+/phpunit-v12.xml export-ignore
+/tests.sh export-ignore

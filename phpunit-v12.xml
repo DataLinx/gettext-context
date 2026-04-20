@@ -3,12 +3,12 @@
          xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="tests/bootstrap.php"
          colors="true"
-         verbose="true">
-    <coverage processUncoveredFiles="true">
+         displayDetailsOnPhpunitDeprecations="true">
+    <source>
         <include>
             <directory suffix=".php">src</directory>
         </include>
-    </coverage>
+    </source>
     <testsuites>
         <testsuite name="Test Suite">
             <directory>tests/Unit</directory>
@@ -19,13 +19,11 @@
         <ini name="display_startup_errors" value="On"/>
         <!--
             PHPUnit recommended PHP config
-            https://docs.phpunit.de/en/9.6/installation.html#recommended-php-configuration
+            https://docs.phpunit.de/en/12.5/installation.html#recommended-php-configuration
         -->
         <ini name="memory_limit" value="-1"/>
         <ini name="error_reporting" value="-1"/>
-        <ini name="log_errors_max_len" value="0"/>
         <ini name="zend.assertions" value="1"/>
         <ini name="assert.exception" value="1"/>
-        <ini name="xdebug.show_exception_trace" value="0"/>
     </php>
 </phpunit>

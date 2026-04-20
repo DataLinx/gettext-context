@@ -68,7 +68,7 @@ jobs:
         run: composer update --prefer-dist --no-progress --prefer-stable
 
       - name: Run test suite
-        run: ./vendor/bin/phpunit --coverage-clover ./coverage.xml
+        run: ./tests.sh --coverage-clover ./coverage.xml
 
       - name: Upload coverage reports to Codecov
         # Make sure the Codecov action is only executed once
